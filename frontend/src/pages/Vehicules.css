@@ -1,0 +1,740 @@
+.vehicules-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fb 0%, #e8ecf1 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-height: 80vh;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .vehicules-container {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.vehicules-container h2 {
+  color: #0066cc;
+  font-size: 2.8em;
+  margin-bottom: 35px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+[data-theme="dark"] .vehicules-container h2 {
+  color: #58a6ff;
+}
+
+.filter-section {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 28px;
+  border-radius: 15px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .filter-section {
+  background: rgba(30, 30, 46, 0.5);
+  border-color: rgba(88, 166, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-section:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 102, 204, 0.15);
+}
+
+[data-theme="dark"] .filter-section:hover {
+  background: rgba(30, 30, 46, 0.6);
+  border-color: rgba(88, 166, 255, 0.25);
+}
+
+.filter-section h3 {
+  color: #0066cc;
+  margin-bottom: 20px;
+  font-size: 1.35em;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+[data-theme="dark"] .filter-section h3 {
+  color: #58a6ff;
+}
+
+.filter-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.97em;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #2c3e50;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .filter-input {
+  background-color: rgba(30, 30, 46, 0.8);
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+  border-color: #0066cc;
+  background-color: white;
+}
+
+[data-theme="dark"] .filter-input:focus {
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+  border-color: #58a6ff;
+  background-color: rgba(30, 30, 46, 0.95);
+}
+
+.filter-input::placeholder {
+  color: #999;
+}
+
+.btn-reset {
+  padding: 12px 22px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95em;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+[data-theme="dark"] .btn-reset {
+  background: #0052a3;
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+}
+
+.btn-reset:hover {
+  background: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+}
+
+[data-theme="dark"] .btn-reset:hover {
+  background: #58a6ff;
+  color: #000;
+  box-shadow: 0 6px 16px rgba(88, 166, 255, 0.3);
+}
+
+.filter-count {
+  color: #555;
+  font-size: 0.98em;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+[data-theme="dark"] .filter-count {
+  color: #b0b0b0;
+}
+
+.count-highlight {
+  background: rgba(0, 102, 204, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  color: #0066cc;
+}
+
+[data-theme="dark"] .count-highlight {
+  background: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 28px;
+  border-radius: 15px;
+  margin-bottom: 35px;
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .form-section {
+  background: rgba(30, 30, 46, 0.5);
+  border-color: rgba(88, 166, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-section:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 102, 204, 0.15);
+}
+
+[data-theme="dark"] .form-section:hover {
+  background: rgba(30, 30, 46, 0.6);
+  border-color: rgba(88, 166, 255, 0.25);
+}
+
+.form-section h3 {
+  color: #0066cc;
+  margin-bottom: 20px;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .form-section h3 {
+  color: #58a6ff;
+}
+
+.form-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-group input,
+.form-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.97);
+  color: #2c3e50;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-input {
+  background-color: rgba(30, 30, 46, 0.8);
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input::placeholder,
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-group input:focus,
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+  border-color: #0066cc;
+  background-color: white;
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-input:focus {
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+  border-color: #58a6ff;
+  background-color: rgba(30, 30, 46, 0.95);
+}
+
+.btn-add, .btn-modify, .btn-cancel {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.btn-add:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
+}
+
+.btn-modify {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.btn-modify:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn-cancel {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.btn-cancel:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.5);
+}
+
+.vehicules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vehicules-list li {
+  background-color: rgba(255, 255, 255, 0.98);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #2c3e50;
+  font-weight: 600;
+  border-left: 5px solid #667eea;
+}
+
+[data-theme="dark"] .vehicules-list li {
+  background-color: rgba(30, 30, 46, 0.7);
+  color: #e0e0e0;
+  border-left-color: #764ba2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.vehicules-list li:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  border-left-color: #764ba2;
+}
+
+.vehicules-list li.no-results {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-left: none;
+}
+
+.vehicules-list button {
+  padding: 9px 16px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vehicules-list button:first-of-type {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.vehicules-list button:first-of-type:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.vehicules-list button:last-of-type {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.vehicules-list button:last-of-type:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+}
+
+@media (max-width: 768px) {
+  .vehicules-container {
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .vehicules-container h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+
+  .filter-section, .form-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .filter-group, .form-group {
+    gap: 10px;
+  }
+
+  .filter-input, .form-group input {
+    min-width: 150px;
+  }
+}
+
+.filter-section {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h3 {
+  color: white;
+  margin-bottom: 18px;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.filter-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.96em;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-input:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.filter-input::placeholder {
+  color: #999;
+}
+
+.btn-reset {
+  padding: 11px 18px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-count {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.count-highlight {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.form-section h3 {
+  color: white;
+  margin-bottom: 18px;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-group input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.btn-add, .btn-modify, .btn-cancel {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-add {
+  background-color: #10b981;
+}
+
+.btn-add:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-modify {
+  background-color: #3b82f6;
+}
+
+.btn-modify:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}
+
+.btn-cancel {
+  background-color: #ef4444;
+}
+
+.btn-cancel:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+.vehicules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vehicules-list li {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 500;
+}
+
+.vehicules-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.vehicules-list li.no-results {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.vehicules-list button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.vehicules-list button:first-of-type {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.vehicules-list button:first-of-type:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}
+
+.vehicules-list button:last-of-type {
+  background-color: #ef4444;
+  color: white;
+}
+
+.vehicules-list button:last-of-type:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
+
+.form-group input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.btn-add, .btn-modify, .btn-cancel {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-add {
+  background-color: #10b981;
+}
+
+.btn-add:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-modify {
+  background-color: #3b82f6;
+}
+
+.btn-modify:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}
+
+.btn-cancel {
+  background-color: #ef4444;
+}
+
+.btn-cancel:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+.vehicules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vehicules-list li {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 500;
+}
+
+.vehicules-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.vehicules-list button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.vehicules-list button:first-of-type {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.vehicules-list button:first-of-type:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}
+
+.vehicules-list button:last-of-type {
+  background-color: #ef4444;
+  color: white;
+}
+
+.vehicules-list button:last-of-type:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
